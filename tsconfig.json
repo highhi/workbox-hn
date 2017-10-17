@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "jsx": "react"
+  },
+  "lib": ["ES2015", "ES2016", "ES2017", "dom"],
+  "exclude": [
+    "./src/client.tsx",
+    "node_modules"
+  ]
+}
