@@ -4,12 +4,14 @@ import { BrowserRouter, Route, withRouter } from 'react-router-dom';
 import AppClient from './components/AppClient';
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(registration => {
-    // 登録成功
-    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-  }).catch(err => {
-    // 登録失敗 :(
-    console.log('ServiceWorker registration failed: ', err);
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        registration.addEventListener('updatefound', event => console.info('update', event));
+      })
+      .catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
   });
 }
 
