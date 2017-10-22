@@ -18,7 +18,7 @@ export interface IStory {
 class Store extends EventEmitter {
   static readonly PER_PAGE = 30;
   private static _store: Store;
-  private api: Firebase.database.Reference;
+  private readonly api: Firebase.database.Reference;
   private itemsCache: {};
   private topStoryIds: number[];
   
