@@ -5,8 +5,6 @@ import ejs from 'ejs';
 
 const app = express();
 
-console.log(__dirname);
-
 app.use(compression());
 app.use(express.static(`${__dirname}/assets`));
 app.set('views', path.join(__dirname, './views'));
