@@ -53,7 +53,6 @@ class Store extends EventEmitter {
     const start = (page - 1) * Store.PER_PAGE;
     const end = page * Store.PER_PAGE;
     const ids = this.topStoryIds.slice(start, end);
-    console.log(ids);
     return this.fetchItems(ids);
   }
 
